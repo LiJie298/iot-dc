@@ -3,10 +3,10 @@ package me.theembers.iot.shadow;
 import com.theembers.iot.shadow.DeviceShadow;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-15 15:20
+ * @author TheEmbers Guo createTime 2019-11-15 15:20
  */
 public class Device extends DeviceShadow<Device, Product> {
+
     private String sn;
     private Long time;
 

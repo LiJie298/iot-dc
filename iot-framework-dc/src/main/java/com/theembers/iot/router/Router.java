@@ -1,14 +1,13 @@
 package com.theembers.iot.router;
 
 import com.theembers.iot.router.selector.Selector;
-
 import java.util.Map;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-11 10:11
+ * @author TheEmbers Guo createTime 2019-11-11 10:11
  */
 public interface Router<P> {
+
     /**
      * 初始化 路由器
      *

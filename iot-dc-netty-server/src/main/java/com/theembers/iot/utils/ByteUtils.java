@@ -2,8 +2,7 @@ package com.theembers.iot.utils;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-09 09:58
+ * @version 1.0 createTime 2018-10-09 09:58
  */
 public class ByteUtils {
 
@@ -23,27 +22,27 @@ public class ByteUtils {
         return sb.toString();
     }
 
-    public static byte[] hex2byte(String inHex){
+    public static byte[] hex2byte(String inHex) {
         int hexlen = inHex.length();
         byte[] result;
-        if (hexlen % 2 == 1){
+        if (hexlen % 2 == 1) {
             //奇数
             hexlen++;
-            result = new byte[(hexlen/2)];
-            inHex="0"+inHex;
-        }else {
+            result = new byte[(hexlen / 2)];
+            inHex = "0" + inHex;
+        } else {
             //偶数
-            result = new byte[(hexlen/2)];
+            result = new byte[(hexlen / 2)];
         }
-        int j=0;
-        for (int i = 0; i < hexlen; i+=2){
-            result[j]=hexToByte(inHex.substring(i,i+2));
+        int j = 0;
+        for (int i = 0; i < hexlen; i += 2) {
+            result[j] = hexToByte(inHex.substring(i, i + 2));
             j++;
         }
         return result;
     }
 
-    public static byte hexToByte(String inHex){
-        return (byte)Integer.parseInt(inHex,16);
+    public static byte hexToByte(String inHex) {
+        return (byte) Integer.parseInt(inHex, 16);
     }
 }

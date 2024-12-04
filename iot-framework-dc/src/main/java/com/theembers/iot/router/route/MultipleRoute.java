@@ -5,19 +5,22 @@ import com.theembers.iot.processor.Processor;
 import com.theembers.iot.router.Router;
 import com.theembers.iot.router.rule.MultipleRule;
 import com.theembers.iot.shadow.Shadow;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-13 15:53
+ * @author TheEmbers Guo createTime 2019-11-13 15:53
  */
 public class MultipleRoute extends AbstractRoute<Map<String[], Dispatcher>, MultipleRule> {
+
     private static final ExecutorService THREAD_POOL = new ThreadPoolExecutor(5, 10, 60, TimeUnit.MINUTES,
-            new LinkedBlockingQueue<>(100), Executors.defaultThreadFactory(),
-            new ThreadPoolExecutor.AbortPolicy());
+        new LinkedBlockingQueue<>(100), Executors.defaultThreadFactory(),
+        new ThreadPoolExecutor.AbortPolicy());
 
 
     @Override

@@ -4,10 +4,10 @@ package com.theembers.iot.shadow;
 import com.theembers.iot.router.rule.Rule;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-11 15:32
+ * @author TheEmbers Guo createTime 2019-11-11 15:32
  */
 public abstract class DeviceShadow<D, P> implements Shadow {
+
     private Rule rule;
     private D device;
     private ProductShadow<P> productShadow;

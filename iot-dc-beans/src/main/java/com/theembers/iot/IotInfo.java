@@ -4,10 +4,10 @@ import java.util.Map;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-29 10:29
+ * @version 1.0 createTime 2018-10-29 10:29
  */
 public class IotInfo {
+
     private String id;
     private Map<String, String> data;
 
@@ -30,8 +30,8 @@ public class IotInfo {
     @Override
     public String toString() {
         return "IotInfo{" +
-                "id='" + id + '\'' +
-                ", data=" + data +
-                '}';
+            "id='" + id + '\'' +
+            ", data=" + data +
+            '}';
     }
 }

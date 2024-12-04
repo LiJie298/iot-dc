@@ -14,11 +14,11 @@ import org.slf4j.LoggerFactory;
  * 链路管理 handler
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-25 15:18
+ * @version 1.0 createTime 2018-10-25 15:18
  */
 @Sharable
 public class ChannelManagerHandler extends ChannelInboundHandlerAdapter {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ChannelManagerHandler.class);
 
     @Override
@@ -51,7 +51,7 @@ public class ChannelManagerHandler extends ChannelInboundHandlerAdapter {
         ChannelId channelId = ctx.channel().id();
         IotInfo iot = GlobalInfo.iotMapper.get(sn);
         GlobalInfo.CHANNEL_INFO_MAP.get(channelId)
-                .setSn(sn).setIotInfo(iot).setChannel(ctx.channel());
+            .setSn(sn).setIotInfo(iot).setChannel(ctx.channel());
 
         RTUChannelInfo channelInfo = GlobalInfo.SN_CHANNEL_INFO_MAP.getOrDefault(sn, RTUChannelInfo.build(sn, channelId));
         channelInfo.setIotInfo(iot).setChannel(ctx.channel());

@@ -8,20 +8,19 @@ import com.theembers.iot.enums.ERTUChannelFlag;
 import com.theembers.iot.utils.CRCUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 485串口 处理器
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-22 15:51
+ * @version 1.0 createTime 2018-10-22 15:51
  */
 public class R485DataProcessor extends ProcessorAbstract implements IDataProcessor, IR485DataProcessor {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(R485DataProcessor.class);
 
     public R485DataProcessor() {
@@ -59,8 +58,9 @@ public class R485DataProcessor extends ProcessorAbstract implements IDataProcess
             EMqExchange[] eMqExchanges = {EMqExchange.RTU_DATA, EMqExchange.RTU_HEART};
             rtuInfo.setMqExchange(eMqExchanges);
         } else {
-            if (super.getNextProcessor() != null)
+            if (super.getNextProcessor() != null) {
                 super.getNextProcessor().translate(ctx, source, rtuInfo);
+            }
         }
     }
 }

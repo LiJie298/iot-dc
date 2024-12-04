@@ -14,10 +14,10 @@ import org.slf4j.LoggerFactory;
  * 系统信息 处理器
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-19 15:50
+ * @version 1.0 createTime 2018-10-19 15:50
  */
 public class SysDataProcessor extends ProcessorAbstract implements IDataProcessor {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(SysDataProcessor.class);
 
     private static final String SIGNAL = "Signal";
@@ -59,8 +59,9 @@ public class SysDataProcessor extends ProcessorAbstract implements IDataProcesso
                 LOGGER.warn("unchecked system source: \"{}\"", sourceStr);
             }
         } else {
-            if (super.getNextProcessor() != null)
+            if (super.getNextProcessor() != null) {
                 super.getNextProcessor().translate(ctx, source, rtuInfo);
+            }
         }
     }
 }

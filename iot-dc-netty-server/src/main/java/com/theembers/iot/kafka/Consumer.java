@@ -11,21 +11,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 /**
  * kafka 消费者
  *
- * @author TheEmbers Guo
- * createTime 2019-08-01 11:06
+ * @author TheEmbers Guo createTime 2019-08-01 11:06
  */
 //@Component
 public class Consumer {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Consumer.class);
 
     @Autowired
     private IoTService ioTService;
+
     /**
      * 指令队列
      *
@@ -38,9 +38,9 @@ public class Consumer {
         LOGGER.info("rtu-command: {}", msg);
         RTUCommandInfo commandInfo = JsonUtils.jsonStr2Obj(msg, RTUCommandInfo.class);
         if (commandInfo == null ||
-                StringUtils.isEmpty(commandInfo.getSn()) ||
-                StringUtils.isEmpty(commandInfo.getInstruction()) ||
-                StringUtils.isEmpty(commandInfo.getInstructionType())) {
+            StringUtils.isEmpty(commandInfo.getSn()) ||
+            StringUtils.isEmpty(commandInfo.getInstruction()) ||
+            StringUtils.isEmpty(commandInfo.getInstructionType())) {
             LOGGER.warn("bad command: {}", commandInfo);
             return;
         }

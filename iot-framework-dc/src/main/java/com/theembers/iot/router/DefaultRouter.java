@@ -3,14 +3,12 @@ package com.theembers.iot.router;
 
 import com.theembers.iot.processor.Processor;
 import com.theembers.iot.router.selector.DefaultSelector;
+import java.util.Map;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
-
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-11 10:58
+ * @author TheEmbers Guo createTime 2019-11-11 10:58
  */
 @Component
 public class DefaultRouter extends AbstractRouter implements InitializingBean {

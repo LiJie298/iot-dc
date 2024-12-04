@@ -1,10 +1,10 @@
 package com.theembers.iot.processor;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-14 14:59
+ * @author TheEmbers Guo createTime 2019-11-14 14:59
  */
 public abstract class InputData<T> implements Input<T> {
+
     private T data;
     private Long time;
 

@@ -4,10 +4,10 @@ package com.theembers.iot;
  * 指标信息
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-22 10:54
+ * @version 1.0 createTime 2018-10-22 10:54
  */
 public class ItemInfo {
+
     /**
      * 指标 id
      */
@@ -20,7 +20,6 @@ public class ItemInfo {
      * 时间戳
      */
     private Long time;
-
 
 
     public ItemInfo(String id, String val) {
@@ -61,9 +60,9 @@ public class ItemInfo {
     @Override
     public String toString() {
         return "ItemInfo{" +
-                "id='" + id + '\'' +
-                ", val='" + val + '\'' +
-                ", time=" + time +
-                '}';
+            "id='" + id + '\'' +
+            ", val='" + val + '\'' +
+            ", time=" + time +
+            '}';
     }
 }

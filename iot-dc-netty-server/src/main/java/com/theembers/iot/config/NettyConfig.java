@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "theembers.iot.netty")
 public class NettyConfig extends DataCollectorConfig {
+
     private Integer port;
 
     public Integer getPort() {

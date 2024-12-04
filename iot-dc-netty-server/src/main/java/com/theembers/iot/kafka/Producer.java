@@ -1,22 +1,20 @@
 package com.theembers.iot.kafka;
 
 import com.theembers.iot.enums.EMqExchange;
+import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
 
 /**
  * kafka 生产者
  *
- * @author TheEmbers Guo
- * createTime 2019-08-01 10:59
+ * @author TheEmbers Guo createTime 2019-08-01 10:59
  */
 //@Component
 public class Producer {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
 
     @Autowired

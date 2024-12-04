@@ -1,14 +1,13 @@
 package me.theembers.iot.rule;
 
 import com.theembers.iot.router.rule.MultipleRule;
-
 import java.util.Map;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-15 15:32
+ * @author TheEmbers Guo createTime 2019-11-15 15:32
  */
 public class CacheRule implements MultipleRule {
+
     private Map<String, String[]> keys;
 
     public Map<String, String[]> getKeys() {

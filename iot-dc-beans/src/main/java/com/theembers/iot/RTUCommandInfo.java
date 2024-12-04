@@ -2,10 +2,10 @@ package com.theembers.iot;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-11-09 14:41
+ * @version 1.0 createTime 2018-11-09 14:41
  */
 public class RTUCommandInfo {
+
     private String id;
     private String sn;
     private String instruction;
@@ -55,12 +55,12 @@ public class RTUCommandInfo {
     @Override
     public String toString() {
         return "RTUCommandInfo{" +
-                "id='" + id + '\'' +
-                ", sn='" + sn + '\'' +
-                ", instruction='" + instruction + '\'' +
-                ", instructionType=" + instructionType +
-                ", tid='" + tid + '\'' +
-                '}';
+            "id='" + id + '\'' +
+            ", sn='" + sn + '\'' +
+            ", instruction='" + instruction + '\'' +
+            ", instructionType=" + instructionType +
+            ", tid='" + tid + '\'' +
+            '}';
     }
 
     public enum EInstructionType {

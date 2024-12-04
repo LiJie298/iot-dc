@@ -6,15 +6,18 @@ import com.theembers.iot.processor.Output;
 import com.theembers.iot.processor.Processor;
 import com.theembers.iot.processor.SlotData;
 import com.theembers.iot.shadow.Shadow;
-
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Spliterator;
+import java.util.Spliterators;
 import java.util.function.Consumer;
 
 /**
  * 处理器调度员
  *
- * @author TheEmbers Guo
- * createTime 2019-11-14 10:43
+ * @author TheEmbers Guo createTime 2019-11-14 10:43
  */
 public class Dispatcher implements Iterable<Processor> {
 
@@ -75,11 +78,8 @@ public class Dispatcher implements Iterable<Processor> {
     }
 
     /**
-     * 执行
-     * 如果 当前processor是头节点，调用 headIn （ 调用 beforeTransform & transForm）
-     * 否则 （中间节点 或者 尾节点） 调用 receive（接收）
-     * 最终 如果 是尾结点 则 调用 tailOut （调用 afterTransform） 并 退出循环
-     * 到 //1 则 调用 buildSlotData （构建插槽）
+     * 执行 如果 当前processor是头节点，调用 headIn （ 调用 beforeTransform & transForm） 否则 （中间节点 或者 尾节点） 调用 receive（接收） 最终 如果 是尾结点 则 调用 tailOut （调用 afterTransform） 并
+     * 退出循环 到 //1 则 调用 buildSlotData （构建插槽）
      *
      * @param shadow
      * @param sourceData

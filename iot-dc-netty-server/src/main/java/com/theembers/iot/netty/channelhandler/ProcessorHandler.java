@@ -1,30 +1,32 @@
 package com.theembers.iot.netty.channelhandler;
 
-import com.theembers.iot.*;
 import com.theembers.iot.enums.EMqExchange;
-import com.theembers.iot.netty.processor.*;
+import com.theembers.iot.netty.processor.DisplayDataProcessor;
+import com.theembers.iot.netty.processor.IDataProcessor;
+import com.theembers.iot.netty.processor.R485DataProcessor;
+import com.theembers.iot.netty.processor.SimDataProcessor;
+import com.theembers.iot.netty.processor.SysDataProcessor;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * RTU 设备 解码
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-19 15:59
+ * @version 1.0 createTime 2018-10-19 15:59
  */
 @Component
 public class ProcessorHandler extends ChannelInboundHandlerAdapter {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(ProcessorHandler.class);
     private final IDataProcessor sysDataProcessor = new SysDataProcessor();
     private final IDataProcessor simDataProcessor = new SimDataProcessor();

@@ -1,14 +1,13 @@
 package me.theembers.iot.bean;
 
 import com.theembers.iot.processor.InputData;
-
 import java.util.List;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-14 14:59
+ * @author TheEmbers Guo createTime 2019-11-14 14:59
  */
 public class TestIotData extends InputData<TestIotData> {
+
     private String sn;
     private String name;
     private List<String> list;

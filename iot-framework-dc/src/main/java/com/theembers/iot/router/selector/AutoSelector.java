@@ -11,8 +11,7 @@ import com.theembers.iot.router.rule.Rule;
 import com.theembers.iot.router.rule.SimpleRule;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-15 17:28
+ * @author TheEmbers Guo createTime 2019-11-15 17:28
  */
 public class AutoSelector extends AbstractSelector {
 

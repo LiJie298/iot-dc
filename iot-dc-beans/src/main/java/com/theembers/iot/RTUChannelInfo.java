@@ -5,10 +5,10 @@ import io.netty.channel.ChannelId;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-25 16:10
+ * @version 1.0 createTime 2018-10-25 16:10
  */
 public class RTUChannelInfo {
+
     private ChannelId channelId;
     private String sn;
     private IotInfo iotInfo;
@@ -62,10 +62,10 @@ public class RTUChannelInfo {
     @Override
     public String toString() {
         return "RTUChannelInfo{" +
-                "channelId=" + channelId +
-                ", sn='" + sn + '\'' +
-                ", iotInfo=" + iotInfo +
-                ", channel=" + channel +
-                '}';
+            "channelId=" + channelId +
+            ", sn='" + sn + '\'' +
+            ", iotInfo=" + iotInfo +
+            ", channel=" + channel +
+            '}';
     }
 }

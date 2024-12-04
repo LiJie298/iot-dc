@@ -4,8 +4,7 @@ import com.theembers.iot.collector.SourceData;
 import com.theembers.iot.shadow.Shadow;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-11 17:57
+ * @author TheEmbers Guo createTime 2019-11-11 17:57
  */
 public abstract class AbstractProcessor<S extends Shadow, I extends Input, O extends Output> implements Processor<S, I, O> {
 

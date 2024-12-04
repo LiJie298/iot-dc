@@ -9,11 +9,12 @@ import io.netty.handler.timeout.IdleStateEvent;
  * 心跳检测 headler
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-26 11:48
+ * @version 1.0 createTime 2018-10-26 11:48
  */
 public class HeartBeatHandler extends ChannelInboundHandlerAdapter {
+
     private int loss_connect_time = 0;
+
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
         if (evt instanceof IdleStateEvent) {

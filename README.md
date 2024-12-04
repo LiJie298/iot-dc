@@ -1,5 +1,6 @@
 ![](https://img.shields.io/github/license/Theembers/iot-dc)
 ![](https://img.shields.io/badge/%E4%B8%AD%E5%9B%BD%E5%8A%A0%E6%B2%B9%20%E6%AD%A6%E6%B1%89%E5%8A%A0%E6%B2%B9-%E4%B8%BA%E6%B0%91%E8%80%8C%E7%94%9F%E4%B8%8E%E6%B0%91%E5%85%B1%E7%94%9F%20%E4%BC%97%E5%BF%97%E6%88%90%E5%9F%8E%E5%85%B1%E5%85%8B%E6%97%B6%E8%89%B0%20-red)
+
 ## IoT-DC framework
 
 > a IoT data collector framework and power by springboot+netty+rabbitmq/kafka
@@ -14,9 +15,9 @@ the obsolete version (branch:s-0.1) will be not update yet (except bug fix), the
 
 旧版本以封版（分支s-0.1）不再更新（除了bug修改），master 分支将启用新的设计，敬请期待！
 
-[branch:s-0.1](https://github.com/Theembers/iot-dc/tree/s-0.1)  
+[branch:s-0.1](https://github.com/Theembers/iot-dc/tree/s-0.1)
 
-🎉 new framework had be done! you can running with `iot-example`-`me.theembers.iot.TestCollector` to debug it. 
+🎉 new framework had be done! you can running with `iot-example`-`me.theembers.iot.TestCollector` to debug it.
 
 🎉 新版本框架已基本完成！可以通过 `iot-example`-`me.theembers.iot.TestCollector` 运行调试。
 

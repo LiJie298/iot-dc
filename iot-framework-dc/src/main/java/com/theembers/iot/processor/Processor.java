@@ -4,13 +4,12 @@ import com.theembers.iot.collector.SourceData;
 import com.theembers.iot.shadow.Shadow;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-11 17:54
+ * @author TheEmbers Guo createTime 2019-11-11 17:54
  */
-public interface Processor<S extends Shadow, I extends Input, O extends Output> extends Slot<S,I, O> {
+public interface Processor<S extends Shadow, I extends Input, O extends Output> extends Slot<S, I, O> {
+
     /**
-     * 前置处理流程
-     * 流数据转换、对象转换等...
+     * 前置处理流程 流数据转换、对象转换等...
      *
      * @param shadow
      * @param srcData
@@ -19,8 +18,7 @@ public interface Processor<S extends Shadow, I extends Input, O extends Output> 
     Input<I> beforeTransform(S shadow, SourceData srcData) throws Exception;
 
     /**
-     * 业务处理
-     * 具体业务赋能
+     * 业务处理 具体业务赋能
      *
      * @param shadow
      * @param input
@@ -29,9 +27,7 @@ public interface Processor<S extends Shadow, I extends Input, O extends Output> 
     Output<O> transform(S shadow, Input<I> input) throws Exception;
 
     /**
-     * 后置处理流程
-     * 只有在最后才会被调用的方法
-     * 数据封装、业务数据封装等
+     * 后置处理流程 只有在最后才会被调用的方法 数据封装、业务数据封装等
      *
      * @param shadow
      * @param output

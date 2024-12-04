@@ -17,10 +17,10 @@ import org.slf4j.LoggerFactory;
  * 端口监听
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-09-30 1:54 PM
+ * @version 1.0 createTime 2018-09-30 1:54 PM
  */
 abstract class PortListenerAbstract {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(PortListenerAbstract.class);
     /**
      * 端口
@@ -53,12 +53,12 @@ abstract class PortListenerAbstract {
         try {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(this.bossGroup, this.workerGroup)
-                    .channel(NioServerSocketChannel.class)
-                    .childHandler(this.settingChannelInitializerHandler());
+                .channel(NioServerSocketChannel.class)
+                .childHandler(this.settingChannelInitializerHandler());
             ChannelFuture channelFuture = bootstrap.bind(this.port).sync();
             LOGGER.info("port:{} bind successful.", port);
             channelFuture.channel().closeFuture().sync();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             bossGroup.shutdownGracefully();
@@ -70,6 +70,7 @@ abstract class PortListenerAbstract {
      * 基础
      */
     abstract class BaseHandler extends ChannelInitializer<SocketChannel> {
+
         /**
          * 拓展
          *
@@ -82,19 +83,19 @@ abstract class PortListenerAbstract {
         protected void initChannel(SocketChannel socketChannel) {
             ChannelPipeline pipeline = socketChannel.pipeline();
             pipeline
-                    // log
-                    .addLast("logging", new LoggingHandler(LogLevel.INFO))
-                    // 心跳检测
-//                    .addLast(new IdleStateHandler(10, 0, 0, TimeUnit.SECONDS))
-//                    .addLast(new HeartBeatHandler())
-                    //  链路管理
-                    .addLast(new ChannelManagerHandler())
+                // log
+                .addLast("logging", new LoggingHandler(LogLevel.INFO))
+                // 心跳检测
+                //                    .addLast(new IdleStateHandler(10, 0, 0, TimeUnit.SECONDS))
+                //                    .addLast(new HeartBeatHandler())
+                //  链路管理
+                .addLast(new ChannelManagerHandler())
             ;
             // 拓展
             extHandler(socketChannel.pipeline());
             pipeline.addLast(new MqHandler())
-                    // 异常管理
-                    .addLast(new ExceptionHandler())
+                // 异常管理
+                .addLast(new ExceptionHandler())
             ;
         }
     }

@@ -2,8 +2,7 @@ package com.theembers.iot.enums;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-11-05 16:04
+ * @version 1.0 createTime 2018-11-05 16:04
  */
 public enum EMqExchange {
     RTU_SIGNAL("rtu_signal_fx"),

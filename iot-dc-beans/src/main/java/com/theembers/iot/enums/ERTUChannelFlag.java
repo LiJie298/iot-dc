@@ -4,8 +4,7 @@ package com.theembers.iot.enums;
  * RTU 通道标记
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-22 13:14
+ * @version 1.0 createTime 2018-10-22 13:14
  */
 public enum ERTUChannelFlag {
     SYS("0#".getBytes()),

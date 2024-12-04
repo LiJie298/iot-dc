@@ -18,11 +18,11 @@ import org.springframework.util.CollectionUtils;
  * 指令下发
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-11-09 13:35
+ * @version 1.0 createTime 2018-11-09 13:35
  */
 @Sharable
 public class CommandHandler extends MessageToByteEncoder<ByteBuf> {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(CommandHandler.class);
 
     @Override
@@ -46,7 +46,7 @@ public class CommandHandler extends MessageToByteEncoder<ByteBuf> {
                 try {
                     byteBuf.writeBytes(ByteUtils.hex2byte(command));
                 } catch (Exception e) {
-                    LOGGER.error("bad command to hex: {} ", command,e);
+                    LOGGER.error("bad command to hex: {} ", command, e);
                     return;
                 }
             }

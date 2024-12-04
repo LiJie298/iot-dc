@@ -5,16 +5,13 @@ import com.theembers.iot.kafka.Producer;
 import com.theembers.iot.utils.JsonUtils;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-08-01 11:17
+ * @author TheEmbers Guo createTime 2019-08-01 11:17
  */
 //@Component
 public class KafkaHandler extends ChannelInboundHandlerAdapter {

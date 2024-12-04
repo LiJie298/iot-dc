@@ -5,22 +5,20 @@ import com.theembers.iot.mq.MQSender;
 import com.theembers.iot.utils.JsonUtils;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 
 /**
  * 消息队列
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-19 16:37
+ * @version 1.0 createTime 2018-10-19 16:37
  */
 //@Component
 public class MqHandler extends ChannelInboundHandlerAdapter {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(MqHandler.class);
 
     public MqHandler() {

@@ -5,18 +5,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.util.StringUtils;
-
 import java.io.IOException;
+import org.springframework.util.StringUtils;
 
 /**
  * json 工具类
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-22 11:23
+ * @version 1.0 createTime 2018-10-22 11:23
  */
 public class JsonUtils {
+
     private static final ObjectMapper objectMapper;
 
     static {

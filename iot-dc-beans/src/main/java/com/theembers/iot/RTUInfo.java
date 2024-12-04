@@ -2,17 +2,16 @@ package com.theembers.iot;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.theembers.iot.enums.EMqExchange;
-
 import java.util.Arrays;
 
 /**
  * netty 对象
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-22 10:53
+ * @version 1.0 createTime 2018-10-22 10:53
  */
 public class RTUInfo<T> {
+
     /**
      * 物联网id
      */
@@ -85,11 +84,11 @@ public class RTUInfo<T> {
     @Override
     public String toString() {
         return "RTUInfo{" +
-                "id='" + id + '\'' +
-                ", sn='" + sn + '\'' +
-                ", data=" + data +
-                ", publish=" + publish +
-                ", mqExchange=" + Arrays.toString(mqExchange) +
-                '}';
+            "id='" + id + '\'' +
+            ", sn='" + sn + '\'' +
+            ", data=" + data +
+            ", publish=" + publish +
+            ", mqExchange=" + Arrays.toString(mqExchange) +
+            '}';
     }
 }

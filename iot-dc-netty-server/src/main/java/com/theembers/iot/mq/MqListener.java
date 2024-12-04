@@ -6,24 +6,22 @@ import com.theembers.iot.netty.channelhandler.ChannelManagerHandler;
 import com.theembers.iot.netty.channelhandler.CommandHandler;
 import com.theembers.iot.redis.IoTService;
 import com.theembers.iot.utils.JsonUtils;
+import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-
-import java.io.IOException;
 
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-11-09 11:09
+ * @version 1.0 createTime 2018-11-09 11:09
  */
 //@Component
 public class MqListener {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(MqListener.class);
 
     @Autowired
@@ -41,9 +39,9 @@ public class MqListener {
         LOGGER.info("rtu-command: {}", msg);
         RTUCommandInfo commandInfo = JsonUtils.jsonStr2Obj(msg, RTUCommandInfo.class);
         if (commandInfo == null ||
-                StringUtils.isEmpty(commandInfo.getSn()) ||
-                StringUtils.isEmpty(commandInfo.getInstruction()) ||
-                StringUtils.isEmpty(commandInfo.getInstructionType())) {
+            StringUtils.isEmpty(commandInfo.getSn()) ||
+            StringUtils.isEmpty(commandInfo.getInstruction()) ||
+            StringUtils.isEmpty(commandInfo.getInstructionType())) {
             LOGGER.warn("bad command: {}", commandInfo);
             return;
         }

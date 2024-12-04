@@ -1,17 +1,16 @@
 package com.theembers.iot;
 
 import io.netty.buffer.ByteBuf;
-
 import java.util.Arrays;
 
 /**
  * modbus 数据模型
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-23 14:16
+ * @version 1.0 createTime 2018-10-23 14:16
  */
 public class ModbusInfo {
+
     private byte[] address;
     private byte[] command;
     private byte[] length;
@@ -34,14 +33,14 @@ public class ModbusInfo {
         this.fullData = new byte[source.readableBytes() - crc.length];
 
         this.source.readBytes(address)
-                // command
-                .readBytes(command)
-                // length
-                .readBytes(length)
-                // data
-                .readBytes(data)
-                // crc
-                .readBytes(crc);
+            // command
+            .readBytes(command)
+            // length
+            .readBytes(length)
+            // data
+            .readBytes(data)
+            // crc
+            .readBytes(crc);
         // fullData
         this.source.resetReaderIndex();
         this.source.readBytes(fullData);
@@ -88,11 +87,11 @@ public class ModbusInfo {
     @Override
     public String toString() {
         return "ModbusInfo{" +
-                "address=" + Arrays.toString(address) +
-                ", command=" + Arrays.toString(command) +
-                ", length=" + Arrays.toString(length) +
-                ", data=" + Arrays.toString(data) +
-                ", crc=" + Arrays.toString(crc) +
-                '}';
+            "address=" + Arrays.toString(address) +
+            ", command=" + Arrays.toString(command) +
+            ", length=" + Arrays.toString(length) +
+            ", data=" + Arrays.toString(data) +
+            ", crc=" + Arrays.toString(crc) +
+            '}';
     }
 }

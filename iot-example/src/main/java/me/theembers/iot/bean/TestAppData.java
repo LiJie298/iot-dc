@@ -4,10 +4,10 @@ import com.theembers.iot.processor.OutputData;
 import com.theembers.iot.processor.SlotData;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-14 15:02
+ * @author TheEmbers Guo createTime 2019-11-14 15:02
  */
 public class TestAppData extends OutputData<TestAppData> implements SlotData<TestAppData> {
+
     private String sn;
 
     public String getSn() {

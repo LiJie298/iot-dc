@@ -7,10 +7,10 @@ import io.netty.buffer.ByteBuf;
  * 数据解码器 抽象类
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-19 15:52
+ * @version 1.0 createTime 2018-10-19 15:52
  */
 public abstract class ProcessorAbstract implements IDataProcessor {
+
     private IDataProcessor nextProcessor;
     private ERTUChannelFlag flag;
 

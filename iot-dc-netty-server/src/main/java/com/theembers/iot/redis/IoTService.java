@@ -4,15 +4,14 @@ import com.theembers.iot.GlobalInfo;
 import com.theembers.iot.IotInfo;
 import com.theembers.iot.utils.JsonUtils;
 import com.theembers.iot.utils.KeyUtils;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 import static com.theembers.iot.GlobalInfo.Global_Iot_Redis_Key;
 
@@ -20,11 +19,11 @@ import static com.theembers.iot.GlobalInfo.Global_Iot_Redis_Key;
  * 物联网 service
  *
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-26 16:36
+ * @version 1.0 createTime 2018-10-26 16:36
  */
 @Service
 public class IoTService {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(IoTService.class);
 
     @Autowired

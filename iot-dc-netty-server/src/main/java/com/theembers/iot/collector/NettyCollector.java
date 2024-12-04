@@ -5,21 +5,20 @@ import com.theembers.iot.netty.RTUPortListener;
 import com.theembers.iot.redis.IoTService;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import java.net.InetAddress;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.net.InetAddress;
-
 /**
  * netty实现的执行器
  *
- * @author TheEmbers Guo
- * createTime 2019-11-06 17:52
+ * @author TheEmbers Guo createTime 2019-11-06 17:52
  */
 @Component
 public class NettyCollector implements DataCollector<NettyConfig> {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyCollector.class);
     private static EventLoopGroup bossGroup = new NioEventLoopGroup();
     private static EventLoopGroup workerGroup = new NioEventLoopGroup();

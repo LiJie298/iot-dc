@@ -1,10 +1,11 @@
 package com.theembers.iot.utils;
+
 /**
  * @author TheEmbers Guo
- * @version 1.0
- * createTime 2018-10-23 11:35
+ * @version 1.0 createTime 2018-10-23 11:35
  */
 public class CRCUtils {
+
     /**
      * 计算CRC16校验码
      *
@@ -29,8 +30,9 @@ public class CRCUtils {
                 if ((crc & 0x0001) != 0) {
                     crc >>= 1;
                     crc ^= 0xA001;
-                } else
+                } else {
                     crc >>= 1;
+                }
             }
         }
         String c = Integer.toHexString(crc).toUpperCase();

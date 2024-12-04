@@ -5,10 +5,10 @@ import com.theembers.iot.collector.SourceData;
 import me.theembers.iot.shadow.IotShadow;
 
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-15 14:11
+ * @author TheEmbers Guo createTime 2019-11-15 14:11
  */
 public class IotMsgData implements SourceData<String> {
+
     private IotShadow shadow;
     private String dataJson;
 

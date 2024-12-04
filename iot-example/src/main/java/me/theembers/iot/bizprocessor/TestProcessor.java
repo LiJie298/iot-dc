@@ -6,15 +6,13 @@ import com.theembers.iot.processor.AbstractProcessor;
 import com.theembers.iot.processor.Input;
 import com.theembers.iot.processor.Output;
 import com.theembers.iot.processor.SlotData;
+import java.util.Date;
 import me.theembers.iot.bean.TestAppData;
 import me.theembers.iot.bean.TestIotData;
 import me.theembers.iot.shadow.IotShadow;
 
-import java.util.Date;
-
 /**
- * @author TheEmbers Guo
- * createTime 2019-11-14 15:01
+ * @author TheEmbers Guo createTime 2019-11-14 15:01
  */
 public class TestProcessor extends AbstractProcessor<IotShadow, TestIotData, TestAppData> {
 
